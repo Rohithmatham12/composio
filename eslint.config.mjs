@@ -180,12 +180,7 @@ export default [
           patterns: [...cliRestrictedImportPatterns, ...cliDescriptorSeamRestrictedImportPatterns],
         },
       ],
-      'no-restricted-syntax': [
-        'error',
-        // uncommented by the boundary-ratchet PR of this stack
-        // ...cliRestrictedSyntax,
-        ...cliProcessStreamRestrictions,
-      ],
+      'no-restricted-syntax': ['error', ...cliRestrictedSyntax, ...cliProcessStreamRestrictions],
     },
   },
   {
